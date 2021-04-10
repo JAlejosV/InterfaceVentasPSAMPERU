@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TRAMARSAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="USR_CORMVHIE">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODCOM" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="USR_CODCOM" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="int" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CIRAPL" Type="varchar" MaxLength="6" />
+          <Property Name="USR_SUCURS" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FCHMOV" Type="datetime" />
+          <Property Name="USR_NROCTA" Type="varchar" MaxLength="20" />
+          <Property Name="USR_DEPOSI" Type="varchar" MaxLength="15" />
+          <Property Name="USR_SECTOR" Type="varchar" MaxLength="15" />
+          <Property Name="USR_TEXTOS" Type="text" />
+          <Property Name="USR_SECPAG" Type="varchar" MaxLength="6" />
+          <Property Name="USR_SECREQ" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CODLIS" Type="char" MaxLength="10" />
+          <Property Name="USR_ESTAUT" Type="smallint" />
+          <Property Name="USR_USRAUT" Type="varchar" MaxLength="36" />
+          <Property Name="USR_FCHAUT" Type="datetime" />
+          <Property Name="USR_CAMSEC" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CODOPR" Type="varchar" MaxLength="30" />
+          <Property Name="USR_IDHELM" Type="varchar" MaxLength="50" />
+          <Property Name="USR_ESTDOC" Type="varchar" MaxLength="3" />
+          <Property Name="USR_CO_FECALT" Type="datetime" />
+          <Property Name="USR_CO_FECMOD" Type="datetime" />
+          <Property Name="USR_CO_USERID" Type="varchar" MaxLength="64" />
+          <Property Name="USR_CO_ULTOPR" Type="char" MaxLength="1" />
+          <Property Name="USR_CO_DEBAJA" Type="char" MaxLength="1" />
+          <Property Name="USR_CO_HORMOV" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_MODULE" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_OALIAS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_TSTAMP" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="USR_CO_LOTTRA" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_LOTREC" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_LOTORI" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_SYSVER" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_CMPVER" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="USR_CORMVIIE">
+          <Key>
+            <PropertyRef Name="USR_CORMVIIE_CODEMP" />
+            <PropertyRef Name="USR_CORMVIIE_MODFOR" />
+            <PropertyRef Name="USR_CORMVIIE_CODCOM" />
+            <PropertyRef Name="USR_CORMVIIE_NROFOR" />
+            <PropertyRef Name="USR_NROITM" />
+            <PropertyRef Name="USR_IDHELMD" />
+          </Key>
+          <Property Name="USR_CORMVIIE_CODEMP" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="USR_CORMVIIE_MODFOR" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="USR_CORMVIIE_CODCOM" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="USR_CORMVIIE_NROFOR" Type="int" Nullable="false" />
+          <Property Name="USR_NROITM" Type="int" Nullable="false" />
+          <Property Name="USR_IDHELMD" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="USR_TIPPRO" Type="char" MaxLength="6" />
+          <Property Name="USR_ARTCOD" Type="varchar" MaxLength="30" />
+          <Property Name="USR_MODCPT" Type="varchar" MaxLength="2" />
+          <Property Name="USR_TIPCPT" Type="char" MaxLength="1" />
+          <Property Name="USR_CODCPT" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CANTID" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="USR_PRECIO" Type="numeric" Precision="20" Scale="6" />
+          <Property Name="USR_UNIMED" Type="varchar" MaxLength="6" />
+          <Property Name="USR_TIPUNI" Type="varchar" MaxLength="1" />
+          <Property Name="USR_PCTBF1" Type="numeric" Precision="15" Scale="7" />
+          <Property Name="USR_TEXTOD" Type="text" />
+          <Property Name="USR_TOTLIN" Type="numeric" Precision="15" Scale="4" />
+          <Property Name="USR_CODDIM" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CUENTA" Type="varchar" MaxLength="40" />
+          <Property Name="USR_CO_FECALT" Type="datetime" />
+          <Property Name="USR_CO_FECMOD" Type="datetime" />
+          <Property Name="USR_CO_USERID" Type="varchar" MaxLength="64" />
+          <Property Name="USR_CO_ULTOPR" Type="char" MaxLength="1" />
+          <Property Name="USR_CO_DEBAJA" Type="char" MaxLength="1" />
+          <Property Name="USR_CO_HORMOV" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_MODULE" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_OALIAS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_TSTAMP" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="USR_CO_LOTTRA" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_LOTREC" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_LOTORI" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CO_SYSVER" Type="varchar" MaxLength="10" />
+          <Property Name="USR_CO_CMPVER" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="USR_FCRAFA">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODFOR" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="USR_CODFOR" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="int" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CIRAPL" Type="varchar" MaxLength="6" />
+          <Property Name="USR_MODCOM" Type="varchar" MaxLength="2" />
+          <Property Name="USR_CODCOM" Type="char" MaxLength="6" />
+          <Property Name="USR_SUCURS" Type="varchar" MaxLength="6" />
+          <Property Name="USR_NROCTA" Type="varchar" MaxLength="20" />
+          <Property Name="USR_FCHMOV" Type="datetime" />
+          <Property Name="USR_CNDPAG" Type="varchar" MaxLength="6" />
+          <Property Name="USR_DEPOSI" Type="varchar" MaxLength="15" />
+          <Property Name="USR_SECTOR" Type="varchar" MaxLength="15" />
+          <Property Name="USR_CODLIS" Type="char" MaxLength="10" />
+          <Property Name="USR_TEXTOS" Type="text" />
+          <Property Name="USR_CAMSEC" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CODOPR" Type="varchar" MaxLength="30" />
+          <Property Name="USR_COMELE" Type="char" MaxLength="1" />
+          <Property Name="USR_OCCLIE" Type="varchar" MaxLength="20" />
+          <Property Name="USR_FETIOP" Type="varchar" MaxLength="4" />
+          <Property Name="USR_TIPORI" Type="varchar" MaxLength="2" />
+          <Property Name="USR_NROORI" Type="varchar" MaxLength="50" />
+          <Property Name="USR_FECORI" Type="datetime" />
+          <Property Name="USR_IMBAAF" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAIN" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAEX" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMIMPU" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMTOTA" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IDHELM" Type="varchar" MaxLength="50" />
+          <Property Name="USR_ESTDOC" Type="varchar" MaxLength="3" />
+          <Property Name="USR_MOTDEV" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_FECALT" Type="datetime" />
+          <Property Name="USR_FC_FECMOD" Type="datetime" />
+          <Property Name="USR_FC_USERID" Type="varchar" MaxLength="64" />
+          <Property Name="USR_FC_ULTOPR" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_DEBAJA" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_HORMOV" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_MODULE" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_OALIAS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_TSTAMP" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTREC" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTORI" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_SYSVER" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_CMPVER" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="USR_FCRFAC">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODFOR" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="USR_CODFOR" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="int" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CIRAPL" Type="varchar" MaxLength="6" />
+          <Property Name="USR_MODCOM" Type="varchar" MaxLength="2" />
+          <Property Name="USR_CODCOM" Type="char" MaxLength="6" />
+          <Property Name="USR_SUCURS" Type="varchar" MaxLength="6" />
+          <Property Name="USR_NROCTA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="USR_FCHMOV" Type="datetime" />
+          <Property Name="USR_CNDPAG" Type="varchar" MaxLength="6" />
+          <Property Name="USR_DEPOSI" Type="varchar" MaxLength="15" />
+          <Property Name="USR_SECTOR" Type="varchar" MaxLength="15" />
+          <Property Name="USR_CODLIS" Type="char" MaxLength="10" />
+          <Property Name="USR_TEXTOS" Type="text" />
+          <Property Name="USR_CAMSEC" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CODOPR" Type="varchar" MaxLength="30" />
+          <Property Name="USR_COMELE" Type="char" MaxLength="1" />
+          <Property Name="USR_OCCLIE" Type="varchar" MaxLength="20" />
+          <Property Name="USR_FETIOP" Type="varchar" MaxLength="4" />
+          <Property Name="USR_TIPORI" Type="varchar" MaxLength="2" />
+          <Property Name="USR_NROORI" Type="varchar" MaxLength="50" />
+          <Property Name="USR_FECORI" Type="datetime" />
+          <Property Name="USR_IMBAAF" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAIN" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAEX" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMIMPU" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IMTOTA" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="USR_IDHELM" Type="varchar" MaxLength="50" />
+          <Property Name="USR_ESTDOC" Type="varchar" MaxLength="3" />
+          <Property Name="USR_MOTDEV" Type="varchar" MaxLength="6" />
+          <Property Name="USR_CODACT" Type="varchar" MaxLength="6" />
+          <Property Name="USR_NROSUB" Type="varchar" MaxLength="20" />
+          <Property Name="USR_DENAVE" Type="varchar" MaxLength="100" />
+          <Property Name="USR_PUERTO" Type="int" />
+          <Property Name="USR_FC_FECALT" Type="datetime" />
+          <Property Name="USR_FC_FECMOD" Type="datetime" />
+          <Property Name="USR_FC_USERID" Type="varchar" MaxLength="64" />
+          <Property Name="USR_FC_ULTOPR" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_DEBAJA" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_HORMOV" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_MODULE" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_OALIAS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_TSTAMP" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTREC" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTORI" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_SYSVER" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_CMPVER" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="USR_FCRFAI">
+          <Key>
+            <PropertyRef Name="USR_FCRFAI_CODEMP" />
+            <PropertyRef Name="USR_FCRFAI_MODFOR" />
+            <PropertyRef Name="USR_FCRFAI_CODFOR" />
+            <PropertyRef Name="USR_FCRFAI_NROFOR" />
+            <PropertyRef Name="USR_NROITM" />
+          </Key>
+          <Property Name="USR_FCRFAI_CODEMP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="USR_FCRFAI_MODFOR" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="USR_FCRFAI_CODFOR" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="USR_FCRFAI_NROFOR" Type="int" Nullable="false" />
+          <Property Name="USR_NROITM" Type="int" Nullable="false" />
+          <Property Name="USR_TIPPRO" Type="char" MaxLength="6" />
+          <Property Name="USR_ARTCOD" Type="varchar" MaxLength="30" />
+          <Property Name="USR_MODCPT" Type="varchar" MaxLength="2" />
+          <Property Name="USR_TIPCPT" Type="char" MaxLength="1" />
+          <Property Name="USR_CODCPT" Type="varchar" MaxLength="6" />
+          <Property Name="USR_PRECIO" Type="numeric" Precision="20" Scale="6" />
+          <Property Name="USR_CANTID" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="USR_PCTBF1" Type="numeric" Precision="15" Scale="7" />
+          <Property Name="USR_CODDIS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_TEXTOD" Type="text" />
+          <Property Name="USR_IDHELM" Type="varchar" MaxLength="50" />
+          <Property Name="USR_FC_FECALT" Type="datetime" />
+          <Property Name="USR_FC_FECMOD" Type="datetime" />
+          <Property Name="USR_FC_USERID" Type="varchar" MaxLength="64" />
+          <Property Name="USR_FC_ULTOPR" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_DEBAJA" Type="char" MaxLength="1" />
+          <Property Name="USR_FC_HORMOV" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_MODULE" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_OALIAS" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_TSTAMP" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTREC" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_LOTORI" Type="varchar" MaxLength="6" />
+          <Property Name="USR_FC_SYSVER" Type="varchar" MaxLength="10" />
+          <Property Name="USR_FC_CMPVER" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="TRAMARSAModelStoreContainer">
+          <EntitySet Name="USR_CORMVHIE" EntityType="Self.USR_CORMVHIE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_CORMVIIE" EntityType="Self.USR_CORMVIIE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_FCRAFA" EntityType="Self.USR_FCRAFA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_FCRFAC" EntityType="Self.USR_FCRFAC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_FCRFAI" EntityType="Self.USR_FCRFAI" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TRAMARSAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="USR_CORMVHIE">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODCOM" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_CODCOM" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="Int32" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CIRAPL" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SUCURS" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FCHMOV" Type="DateTime" Precision="3" />
+          <Property Name="USR_NROCTA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_DEPOSI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SECTOR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TEXTOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SECPAG" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SECREQ" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODLIS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="USR_ESTAUT" Type="Int16" />
+          <Property Name="USR_USRAUT" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FCHAUT" Type="DateTime" Precision="3" />
+          <Property Name="USR_CAMSEC" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODOPR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USR_IDHELM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_ESTDOC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_FECALT" Type="DateTime" Precision="3" />
+          <Property Name="USR_CO_FECMOD" Type="DateTime" Precision="3" />
+          <Property Name="USR_CO_USERID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_ULTOPR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CO_DEBAJA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CO_HORMOV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_MODULE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_OALIAS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_TSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="USR_CO_LOTTRA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_LOTREC" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_LOTORI" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_SYSVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_CMPVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USR_FCRAFA">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODFOR" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_CODFOR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="Int32" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CIRAPL" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MODCOM" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODCOM" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="USR_SUCURS" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_NROCTA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FCHMOV" Type="DateTime" Precision="3" />
+          <Property Name="USR_CNDPAG" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_DEPOSI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SECTOR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODLIS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="USR_TEXTOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CAMSEC" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODOPR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USR_COMELE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_OCCLIE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FETIOP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPORI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_NROORI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FECORI" Type="DateTime" Precision="3" />
+          <Property Name="USR_IMBAAF" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAIN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAEX" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMIMPU" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMTOTA" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IDHELM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_ESTDOC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MOTDEV" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_FECALT" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_FECMOD" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_USERID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_ULTOPR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_DEBAJA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_HORMOV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_MODULE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_OALIAS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_TSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTREC" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTORI" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_SYSVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_CMPVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USR_FCRFAC">
+          <Key>
+            <PropertyRef Name="USR_CODEMP" />
+            <PropertyRef Name="USR_MODFOR" />
+            <PropertyRef Name="USR_CODFOR" />
+            <PropertyRef Name="USR_NROFOR" />
+          </Key>
+          <Property Name="USR_CODEMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_MODFOR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_CODFOR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_NROFOR" Type="Int32" Nullable="false" />
+          <Property Name="USR_CIRCOM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CIRAPL" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MODCOM" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODCOM" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="USR_SUCURS" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_NROCTA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_FCHMOV" Type="DateTime" Precision="3" />
+          <Property Name="USR_CNDPAG" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_DEPOSI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_SECTOR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODLIS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="USR_TEXTOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CAMSEC" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="USR_TIPOPR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODOPR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USR_COMELE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_OCCLIE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FETIOP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPORI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_NROORI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FECORI" Type="DateTime" Precision="3" />
+          <Property Name="USR_IMBAAF" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAIN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMBAEX" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMIMPU" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IMTOTA" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="USR_IDHELM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_ESTDOC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MOTDEV" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_FECALT" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_FECMOD" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_USERID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_ULTOPR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_DEBAJA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_HORMOV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_MODULE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_OALIAS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_TSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTREC" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTORI" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_SYSVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_CMPVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CODACT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_NROSUB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_DENAVE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="USR_PUERTO" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USR_FCRFAI">
+          <Key>
+            <PropertyRef Name="USR_FCRFAI_CODEMP" />
+            <PropertyRef Name="USR_FCRFAI_MODFOR" />
+            <PropertyRef Name="USR_FCRFAI_CODFOR" />
+            <PropertyRef Name="USR_FCRFAI_NROFOR" />
+            <PropertyRef Name="USR_NROITM" />
+          </Key>
+          <Property Name="USR_FCRFAI_CODEMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_FCRFAI_MODFOR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_FCRFAI_CODFOR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USR_FCRFAI_NROFOR" Type="Int32" Nullable="false" />
+          <Property Name="USR_NROITM" Type="Int32" Nullable="false" />
+          <Property Name="USR_TIPPRO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="USR_ARTCOD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MODCPT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPCPT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CODCPT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_PRECIO" Type="Decimal" Precision="20" Scale="6" />
+          <Property Name="USR_CANTID" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="USR_PCTBF1" Type="Decimal" Precision="15" Scale="7" />
+          <Property Name="USR_CODDIS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TEXTOD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR_IDHELM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_FECALT" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_FECMOD" Type="DateTime" Precision="3" />
+          <Property Name="USR_FC_USERID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_ULTOPR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_DEBAJA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_FC_HORMOV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_MODULE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_OALIAS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_TSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="USR_FC_LOTTRA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTREC" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_LOTORI" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_SYSVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_FC_CMPVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TRAMARSAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="USR_CORMVHIE" EntityType="Self.USR_CORMVHIE" />
+          <EntitySet Name="USR_FCRAFA" EntityType="Self.USR_FCRAFA" />
+          <EntitySet Name="USR_FCRFAC" EntityType="Self.USR_FCRFAC" />
+          <EntitySet Name="USR_FCRFAI" EntityType="Self.USR_FCRFAI" />
+          <EntitySet Name="USR_CORMVIIE" EntityType="TRAMARSAModel.USR_CORMVIIE" />
+        </EntityContainer>
+        <EntityType Name="USR_CORMVIIE">
+          <Key>
+            <PropertyRef Name="USR_CORMVIIE_CODEMP" />
+            <PropertyRef Name="USR_CORMVIIE_MODFOR" />
+            <PropertyRef Name="USR_CORMVIIE_CODCOM" />
+            <PropertyRef Name="USR_CORMVIIE_NROFOR" />
+            <PropertyRef Name="USR_NROITM" />
+            <PropertyRef Name="USR_IDHELMD" />
+          </Key>
+          <Property Name="USR_CORMVIIE_CODEMP" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CORMVIIE_MODFOR" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CORMVIIE_CODCOM" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CORMVIIE_NROFOR" Type="Int32" Nullable="false" />
+          <Property Name="USR_NROITM" Type="Int32" Nullable="false" />
+          <Property Name="USR_IDHELMD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPPRO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="USR_ARTCOD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MODCPT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPCPT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CODCPT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CANTID" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="USR_PRECIO" Type="Decimal" Precision="20" Scale="6" />
+          <Property Name="USR_UNIMED" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TIPUNI" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="USR_PCTBF1" Type="Decimal" Precision="15" Scale="7" />
+          <Property Name="USR_TEXTOD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR_TOTLIN" Type="Decimal" Precision="15" Scale="4" />
+          <Property Name="USR_CODDIM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CUENTA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_FECALT" Type="DateTime" Precision="3" />
+          <Property Name="USR_CO_FECMOD" Type="DateTime" Precision="3" />
+          <Property Name="USR_CO_USERID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_ULTOPR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CO_DEBAJA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USR_CO_HORMOV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_MODULE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_OALIAS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_TSTAMP" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="USR_CO_LOTTRA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_LOTREC" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_LOTORI" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_SYSVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CO_CMPVER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TRAMARSAModelStoreContainer" CdmEntityContainer="TRAMARSAEntities">
+          <EntitySetMapping Name="USR_CORMVHIE">
+            <EntityTypeMapping TypeName="TRAMARSAModel.USR_CORMVHIE">
+              <MappingFragment StoreEntitySet="USR_CORMVHIE">
+                <ScalarProperty Name="USR_CODEMP" ColumnName="USR_CODEMP" />
+                <ScalarProperty Name="USR_MODFOR" ColumnName="USR_MODFOR" />
+                <ScalarProperty Name="USR_CODCOM" ColumnName="USR_CODCOM" />
+                <ScalarProperty Name="USR_NROFOR" ColumnName="USR_NROFOR" />
+                <ScalarProperty Name="USR_CIRCOM" ColumnName="USR_CIRCOM" />
+                <ScalarProperty Name="USR_CIRAPL" ColumnName="USR_CIRAPL" />
+                <ScalarProperty Name="USR_SUCURS" ColumnName="USR_SUCURS" />
+                <ScalarProperty Name="USR_FCHMOV" ColumnName="USR_FCHMOV" />
+                <ScalarProperty Name="USR_NROCTA" ColumnName="USR_NROCTA" />
+                <ScalarProperty Name="USR_DEPOSI" ColumnName="USR_DEPOSI" />
+                <ScalarProperty Name="USR_SECTOR" ColumnName="USR_SECTOR" />
+                <ScalarProperty Name="USR_TEXTOS" ColumnName="USR_TEXTOS" />
+                <ScalarProperty Name="USR_SECPAG" ColumnName="USR_SECPAG" />
+                <ScalarProperty Name="USR_SECREQ" ColumnName="USR_SECREQ" />
+                <ScalarProperty Name="USR_CODLIS" ColumnName="USR_CODLIS" />
+                <ScalarProperty Name="USR_ESTAUT" ColumnName="USR_ESTAUT" />
+                <ScalarProperty Name="USR_USRAUT" ColumnName="USR_USRAUT" />
+                <ScalarProperty Name="USR_FCHAUT" ColumnName="USR_FCHAUT" />
+                <ScalarProperty Name="USR_CAMSEC" ColumnName="USR_CAMSEC" />
+                <ScalarProperty Name="USR_TIPOPR" ColumnName="USR_TIPOPR" />
+                <ScalarProperty Name="USR_CODOPR" ColumnName="USR_CODOPR" />
+                <ScalarProperty Name="USR_IDHELM" ColumnName="USR_IDHELM" />
+                <ScalarProperty Name="USR_ESTDOC" ColumnName="USR_ESTDOC" />
+                <ScalarProperty Name="USR_CO_FECALT" ColumnName="USR_CO_FECALT" />
+                <ScalarProperty Name="USR_CO_FECMOD" ColumnName="USR_CO_FECMOD" />
+                <ScalarProperty Name="USR_CO_USERID" ColumnName="USR_CO_USERID" />
+                <ScalarProperty Name="USR_CO_ULTOPR" ColumnName="USR_CO_ULTOPR" />
+                <ScalarProperty Name="USR_CO_DEBAJA" ColumnName="USR_CO_DEBAJA" />
+                <ScalarProperty Name="USR_CO_HORMOV" ColumnName="USR_CO_HORMOV" />
+                <ScalarProperty Name="USR_CO_MODULE" ColumnName="USR_CO_MODULE" />
+                <ScalarProperty Name="USR_CO_OALIAS" ColumnName="USR_CO_OALIAS" />
+                <ScalarProperty Name="USR_CO_TSTAMP" ColumnName="USR_CO_TSTAMP" />
+                <ScalarProperty Name="USR_CO_LOTTRA" ColumnName="USR_CO_LOTTRA" />
+                <ScalarProperty Name="USR_CO_LOTREC" ColumnName="USR_CO_LOTREC" />
+                <ScalarProperty Name="USR_CO_LOTORI" ColumnName="USR_CO_LOTORI" />
+                <ScalarProperty Name="USR_CO_SYSVER" ColumnName="USR_CO_SYSVER" />
+                <ScalarProperty Name="USR_CO_CMPVER" ColumnName="USR_CO_CMPVER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USR_FCRAFA">
+            <EntityTypeMapping TypeName="TRAMARSAModel.USR_FCRAFA">
+              <MappingFragment StoreEntitySet="USR_FCRAFA">
+                <ScalarProperty Name="USR_CODEMP" ColumnName="USR_CODEMP" />
+                <ScalarProperty Name="USR_MODFOR" ColumnName="USR_MODFOR" />
+                <ScalarProperty Name="USR_CODFOR" ColumnName="USR_CODFOR" />
+                <ScalarProperty Name="USR_NROFOR" ColumnName="USR_NROFOR" />
+                <ScalarProperty Name="USR_CIRCOM" ColumnName="USR_CIRCOM" />
+                <ScalarProperty Name="USR_CIRAPL" ColumnName="USR_CIRAPL" />
+                <ScalarProperty Name="USR_MODCOM" ColumnName="USR_MODCOM" />
+                <ScalarProperty Name="USR_CODCOM" ColumnName="USR_CODCOM" />
+                <ScalarProperty Name="USR_SUCURS" ColumnName="USR_SUCURS" />
+                <ScalarProperty Name="USR_NROCTA" ColumnName="USR_NROCTA" />
+                <ScalarProperty Name="USR_FCHMOV" ColumnName="USR_FCHMOV" />
+                <ScalarProperty Name="USR_CNDPAG" ColumnName="USR_CNDPAG" />
+                <ScalarProperty Name="USR_DEPOSI" ColumnName="USR_DEPOSI" />
+                <ScalarProperty Name="USR_SECTOR" ColumnName="USR_SECTOR" />
+                <ScalarProperty Name="USR_CODLIS" ColumnName="USR_CODLIS" />
+                <ScalarProperty Name="USR_TEXTOS" ColumnName="USR_TEXTOS" />
+                <ScalarProperty Name="USR_CAMSEC" ColumnName="USR_CAMSEC" />
+                <ScalarProperty Name="USR_TIPOPR" ColumnName="USR_TIPOPR" />
+                <ScalarProperty Name="USR_CODOPR" ColumnName="USR_CODOPR" />
+                <ScalarProperty Name="USR_COMELE" ColumnName="USR_COMELE" />
+                <ScalarProperty Name="USR_OCCLIE" ColumnName="USR_OCCLIE" />
+                <ScalarProperty Name="USR_FETIOP" ColumnName="USR_FETIOP" />
+                <ScalarProperty Name="USR_TIPORI" ColumnName="USR_TIPORI" />
+                <ScalarProperty Name="USR_NROORI" ColumnName="USR_NROORI" />
+                <ScalarProperty Name="USR_FECORI" ColumnName="USR_FECORI" />
+                <ScalarProperty Name="USR_IMBAAF" ColumnName="USR_IMBAAF" />
+                <ScalarProperty Name="USR_IMBAIN" ColumnName="USR_IMBAIN" />
+                <ScalarProperty Name="USR_IMBAEX" ColumnName="USR_IMBAEX" />
+                <ScalarProperty Name="USR_IMIMPU" ColumnName="USR_IMIMPU" />
+                <ScalarProperty Name="USR_IMTOTA" ColumnName="USR_IMTOTA" />
+                <ScalarProperty Name="USR_IDHELM" ColumnName="USR_IDHELM" />
+                <ScalarProperty Name="USR_ESTDOC" ColumnName="USR_ESTDOC" />
+                <ScalarProperty Name="USR_MOTDEV" ColumnName="USR_MOTDEV" />
+                <ScalarProperty Name="USR_FC_FECALT" ColumnName="USR_FC_FECALT" />
+                <ScalarProperty Name="USR_FC_FECMOD" ColumnName="USR_FC_FECMOD" />
+                <ScalarProperty Name="USR_FC_USERID" ColumnName="USR_FC_USERID" />
+                <ScalarProperty Name="USR_FC_ULTOPR" ColumnName="USR_FC_ULTOPR" />
+                <ScalarProperty Name="USR_FC_DEBAJA" ColumnName="USR_FC_DEBAJA" />
+                <ScalarProperty Name="USR_FC_HORMOV" ColumnName="USR_FC_HORMOV" />
+                <ScalarProperty Name="USR_FC_MODULE" ColumnName="USR_FC_MODULE" />
+                <ScalarProperty Name="USR_FC_OALIAS" ColumnName="USR_FC_OALIAS" />
+                <ScalarProperty Name="USR_FC_TSTAMP" ColumnName="USR_FC_TSTAMP" />
+                <ScalarProperty Name="USR_FC_LOTTRA" ColumnName="USR_FC_LOTTRA" />
+                <ScalarProperty Name="USR_FC_LOTREC" ColumnName="USR_FC_LOTREC" />
+                <ScalarProperty Name="USR_FC_LOTORI" ColumnName="USR_FC_LOTORI" />
+                <ScalarProperty Name="USR_FC_SYSVER" ColumnName="USR_FC_SYSVER" />
+                <ScalarProperty Name="USR_FC_CMPVER" ColumnName="USR_FC_CMPVER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USR_FCRFAC">
+            <EntityTypeMapping TypeName="TRAMARSAModel.USR_FCRFAC">
+              <MappingFragment StoreEntitySet="USR_FCRFAC">
+                <ScalarProperty Name="USR_PUERTO" ColumnName="USR_PUERTO" />
+                <ScalarProperty Name="USR_DENAVE" ColumnName="USR_DENAVE" />
+                <ScalarProperty Name="USR_NROSUB" ColumnName="USR_NROSUB" />
+                <ScalarProperty Name="USR_CODEMP" ColumnName="USR_CODEMP" />
+                <ScalarProperty Name="USR_MODFOR" ColumnName="USR_MODFOR" />
+                <ScalarProperty Name="USR_CODFOR" ColumnName="USR_CODFOR" />
+                <ScalarProperty Name="USR_NROFOR" ColumnName="USR_NROFOR" />
+                <ScalarProperty Name="USR_CIRCOM" ColumnName="USR_CIRCOM" />
+                <ScalarProperty Name="USR_CIRAPL" ColumnName="USR_CIRAPL" />
+                <ScalarProperty Name="USR_MODCOM" ColumnName="USR_MODCOM" />
+                <ScalarProperty Name="USR_CODCOM" ColumnName="USR_CODCOM" />
+                <ScalarProperty Name="USR_SUCURS" ColumnName="USR_SUCURS" />
+                <ScalarProperty Name="USR_NROCTA" ColumnName="USR_NROCTA" />
+                <ScalarProperty Name="USR_FCHMOV" ColumnName="USR_FCHMOV" />
+                <ScalarProperty Name="USR_CNDPAG" ColumnName="USR_CNDPAG" />
+                <ScalarProperty Name="USR_DEPOSI" ColumnName="USR_DEPOSI" />
+                <ScalarProperty Name="USR_SECTOR" ColumnName="USR_SECTOR" />
+                <ScalarProperty Name="USR_CODLIS" ColumnName="USR_CODLIS" />
+                <ScalarProperty Name="USR_TEXTOS" ColumnName="USR_TEXTOS" />
+                <ScalarProperty Name="USR_CAMSEC" ColumnName="USR_CAMSEC" />
+                <ScalarProperty Name="USR_TIPOPR" ColumnName="USR_TIPOPR" />
+                <ScalarProperty Name="USR_CODOPR" ColumnName="USR_CODOPR" />
+                <ScalarProperty Name="USR_COMELE" ColumnName="USR_COMELE" />
+                <ScalarProperty Name="USR_OCCLIE" ColumnName="USR_OCCLIE" />
+                <ScalarProperty Name="USR_FETIOP" ColumnName="USR_FETIOP" />
+                <ScalarProperty Name="USR_TIPORI" ColumnName="USR_TIPORI" />
+                <ScalarProperty Name="USR_NROORI" ColumnName="USR_NROORI" />
+                <ScalarProperty Name="USR_FECORI" ColumnName="USR_FECORI" />
+                <ScalarProperty Name="USR_IMBAAF" ColumnName="USR_IMBAAF" />
+                <ScalarProperty Name="USR_IMBAIN" ColumnName="USR_IMBAIN" />
+                <ScalarProperty Name="USR_IMBAEX" ColumnName="USR_IMBAEX" />
+                <ScalarProperty Name="USR_IMIMPU" ColumnName="USR_IMIMPU" />
+                <ScalarProperty Name="USR_IMTOTA" ColumnName="USR_IMTOTA" />
+                <ScalarProperty Name="USR_IDHELM" ColumnName="USR_IDHELM" />
+                <ScalarProperty Name="USR_ESTDOC" ColumnName="USR_ESTDOC" />
+                <ScalarProperty Name="USR_MOTDEV" ColumnName="USR_MOTDEV" />
+                <ScalarProperty Name="USR_FC_FECALT" ColumnName="USR_FC_FECALT" />
+                <ScalarProperty Name="USR_FC_FECMOD" ColumnName="USR_FC_FECMOD" />
+                <ScalarProperty Name="USR_FC_USERID" ColumnName="USR_FC_USERID" />
+                <ScalarProperty Name="USR_FC_ULTOPR" ColumnName="USR_FC_ULTOPR" />
+                <ScalarProperty Name="USR_FC_DEBAJA" ColumnName="USR_FC_DEBAJA" />
+                <ScalarProperty Name="USR_FC_HORMOV" ColumnName="USR_FC_HORMOV" />
+                <ScalarProperty Name="USR_FC_MODULE" ColumnName="USR_FC_MODULE" />
+                <ScalarProperty Name="USR_FC_OALIAS" ColumnName="USR_FC_OALIAS" />
+                <ScalarProperty Name="USR_FC_TSTAMP" ColumnName="USR_FC_TSTAMP" />
+                <ScalarProperty Name="USR_FC_LOTTRA" ColumnName="USR_FC_LOTTRA" />
+                <ScalarProperty Name="USR_FC_LOTREC" ColumnName="USR_FC_LOTREC" />
+                <ScalarProperty Name="USR_FC_LOTORI" ColumnName="USR_FC_LOTORI" />
+                <ScalarProperty Name="USR_FC_SYSVER" ColumnName="USR_FC_SYSVER" />
+                <ScalarProperty Name="USR_FC_CMPVER" ColumnName="USR_FC_CMPVER" />
+                <ScalarProperty Name="USR_CODACT" ColumnName="USR_CODACT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USR_FCRFAI">
+            <EntityTypeMapping TypeName="TRAMARSAModel.USR_FCRFAI">
+              <MappingFragment StoreEntitySet="USR_FCRFAI">
+                <ScalarProperty Name="USR_FCRFAI_CODEMP" ColumnName="USR_FCRFAI_CODEMP" />
+                <ScalarProperty Name="USR_FCRFAI_MODFOR" ColumnName="USR_FCRFAI_MODFOR" />
+                <ScalarProperty Name="USR_FCRFAI_CODFOR" ColumnName="USR_FCRFAI_CODFOR" />
+                <ScalarProperty Name="USR_FCRFAI_NROFOR" ColumnName="USR_FCRFAI_NROFOR" />
+                <ScalarProperty Name="USR_NROITM" ColumnName="USR_NROITM" />
+                <ScalarProperty Name="USR_TIPPRO" ColumnName="USR_TIPPRO" />
+                <ScalarProperty Name="USR_ARTCOD" ColumnName="USR_ARTCOD" />
+                <ScalarProperty Name="USR_MODCPT" ColumnName="USR_MODCPT" />
+                <ScalarProperty Name="USR_TIPCPT" ColumnName="USR_TIPCPT" />
+                <ScalarProperty Name="USR_CODCPT" ColumnName="USR_CODCPT" />
+                <ScalarProperty Name="USR_PRECIO" ColumnName="USR_PRECIO" />
+                <ScalarProperty Name="USR_CANTID" ColumnName="USR_CANTID" />
+                <ScalarProperty Name="USR_PCTBF1" ColumnName="USR_PCTBF1" />
+                <ScalarProperty Name="USR_CODDIS" ColumnName="USR_CODDIS" />
+                <ScalarProperty Name="USR_TEXTOD" ColumnName="USR_TEXTOD" />
+                <ScalarProperty Name="USR_IDHELM" ColumnName="USR_IDHELM" />
+                <ScalarProperty Name="USR_FC_FECALT" ColumnName="USR_FC_FECALT" />
+                <ScalarProperty Name="USR_FC_FECMOD" ColumnName="USR_FC_FECMOD" />
+                <ScalarProperty Name="USR_FC_USERID" ColumnName="USR_FC_USERID" />
+                <ScalarProperty Name="USR_FC_ULTOPR" ColumnName="USR_FC_ULTOPR" />
+                <ScalarProperty Name="USR_FC_DEBAJA" ColumnName="USR_FC_DEBAJA" />
+                <ScalarProperty Name="USR_FC_HORMOV" ColumnName="USR_FC_HORMOV" />
+                <ScalarProperty Name="USR_FC_MODULE" ColumnName="USR_FC_MODULE" />
+                <ScalarProperty Name="USR_FC_OALIAS" ColumnName="USR_FC_OALIAS" />
+                <ScalarProperty Name="USR_FC_TSTAMP" ColumnName="USR_FC_TSTAMP" />
+                <ScalarProperty Name="USR_FC_LOTTRA" ColumnName="USR_FC_LOTTRA" />
+                <ScalarProperty Name="USR_FC_LOTREC" ColumnName="USR_FC_LOTREC" />
+                <ScalarProperty Name="USR_FC_LOTORI" ColumnName="USR_FC_LOTORI" />
+                <ScalarProperty Name="USR_FC_SYSVER" ColumnName="USR_FC_SYSVER" />
+                <ScalarProperty Name="USR_FC_CMPVER" ColumnName="USR_FC_CMPVER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USR_CORMVIIE">
+            <EntityTypeMapping TypeName="TRAMARSAModel.USR_CORMVIIE">
+              <MappingFragment StoreEntitySet="USR_CORMVIIE">
+                <ScalarProperty Name="USR_CO_CMPVER" ColumnName="USR_CO_CMPVER" />
+                <ScalarProperty Name="USR_CO_SYSVER" ColumnName="USR_CO_SYSVER" />
+                <ScalarProperty Name="USR_CO_LOTORI" ColumnName="USR_CO_LOTORI" />
+                <ScalarProperty Name="USR_CO_LOTREC" ColumnName="USR_CO_LOTREC" />
+                <ScalarProperty Name="USR_CO_LOTTRA" ColumnName="USR_CO_LOTTRA" />
+                <ScalarProperty Name="USR_CO_TSTAMP" ColumnName="USR_CO_TSTAMP" />
+                <ScalarProperty Name="USR_CO_OALIAS" ColumnName="USR_CO_OALIAS" />
+                <ScalarProperty Name="USR_CO_MODULE" ColumnName="USR_CO_MODULE" />
+                <ScalarProperty Name="USR_CO_HORMOV" ColumnName="USR_CO_HORMOV" />
+                <ScalarProperty Name="USR_CO_DEBAJA" ColumnName="USR_CO_DEBAJA" />
+                <ScalarProperty Name="USR_CO_ULTOPR" ColumnName="USR_CO_ULTOPR" />
+                <ScalarProperty Name="USR_CO_USERID" ColumnName="USR_CO_USERID" />
+                <ScalarProperty Name="USR_CO_FECMOD" ColumnName="USR_CO_FECMOD" />
+                <ScalarProperty Name="USR_CO_FECALT" ColumnName="USR_CO_FECALT" />
+                <ScalarProperty Name="USR_CUENTA" ColumnName="USR_CUENTA" />
+                <ScalarProperty Name="USR_CODDIM" ColumnName="USR_CODDIM" />
+                <ScalarProperty Name="USR_TOTLIN" ColumnName="USR_TOTLIN" />
+                <ScalarProperty Name="USR_TEXTOD" ColumnName="USR_TEXTOD" />
+                <ScalarProperty Name="USR_PCTBF1" ColumnName="USR_PCTBF1" />
+                <ScalarProperty Name="USR_TIPUNI" ColumnName="USR_TIPUNI" />
+                <ScalarProperty Name="USR_UNIMED" ColumnName="USR_UNIMED" />
+                <ScalarProperty Name="USR_PRECIO" ColumnName="USR_PRECIO" />
+                <ScalarProperty Name="USR_CANTID" ColumnName="USR_CANTID" />
+                <ScalarProperty Name="USR_CODCPT" ColumnName="USR_CODCPT" />
+                <ScalarProperty Name="USR_TIPCPT" ColumnName="USR_TIPCPT" />
+                <ScalarProperty Name="USR_MODCPT" ColumnName="USR_MODCPT" />
+                <ScalarProperty Name="USR_ARTCOD" ColumnName="USR_ARTCOD" />
+                <ScalarProperty Name="USR_TIPPRO" ColumnName="USR_TIPPRO" />
+                <ScalarProperty Name="USR_IDHELMD" ColumnName="USR_IDHELMD" />
+                <ScalarProperty Name="USR_NROITM" ColumnName="USR_NROITM" />
+                <ScalarProperty Name="USR_CORMVIIE_NROFOR" ColumnName="USR_CORMVIIE_NROFOR" />
+                <ScalarProperty Name="USR_CORMVIIE_CODCOM" ColumnName="USR_CORMVIIE_CODCOM" />
+                <ScalarProperty Name="USR_CORMVIIE_MODFOR" ColumnName="USR_CORMVIIE_MODFOR" />
+                <ScalarProperty Name="USR_CORMVIIE_CODEMP" ColumnName="USR_CORMVIIE_CODEMP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

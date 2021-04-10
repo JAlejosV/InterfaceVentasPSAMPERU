@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HELMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CentroBeneficioPracticoSede">
+          <Key>
+            <PropertyRef Name="IdCentroBeneficioPracticoSede" />
+          </Key>
+          <Property Name="IdCentroBeneficioPracticoSede" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPuerto" Type="bigint" Nullable="false" />
+          <Property Name="CentroBeneficio" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="EstadoRegistro" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FechaHoraCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" MaxLength="100" />
+          <Property Name="FechaHoraActualizacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ClienteRelacionado">
+          <Key>
+            <PropertyRef Name="IdClienteRelacionado" />
+          </Key>
+          <Property Name="IdClienteRelacionado" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumeroDocumento" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EstadoRegistro" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FechaHoraCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" MaxLength="100" />
+          <Property Name="FechaHoraActualizacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdCodigoDocumento" />
+          </Key>
+          <Property Name="IdCodigoDocumento" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdHelm" Type="varchar" MaxLength="50" />
+          <Property Name="CodigoDocumento" Type="int" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="100" />
+          <Property Name="CodigoDocumentoCliente" Type="int" />
+          <Property Name="NumeroDocumentoCliente" Type="varchar" MaxLength="20" />
+          <Property Name="DireccionCliente" Type="varchar" MaxLength="200" />
+          <Property Name="NombreSolidario" Type="varchar" MaxLength="100" />
+          <Property Name="NombreNave" Type="varchar" MaxLength="100" />
+          <Property Name="TRB" Type="numeric" Precision="15" Scale="3" />
+          <Property Name="Eslora" Type="numeric" Precision="15" Scale="3" />
+          <Property Name="CodigoMoneda" Type="int" />
+          <Property Name="NombreMotivoNC_ND" Type="varchar" MaxLength="60" />
+          <Property Name="CodigoSunatNC_ND" Type="varchar" MaxLength="4" />
+          <Property Name="Serie" Type="varchar" MaxLength="5" />
+          <Property Name="Numero" Type="varchar" MaxLength="20" />
+          <Property Name="FechaEmision" Type="datetime" />
+          <Property Name="TipoCambio" Type="numeric" Precision="15" Scale="3" />
+          <Property Name="Glosa" Type="varchar" MaxLength="255" />
+          <Property Name="FormaPago" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="200" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="SerieReferencia" Type="varchar" MaxLength="5" />
+          <Property Name="NumeroReferencia" Type="varchar" MaxLength="20" />
+          <Property Name="CodigoDocumentoReferencia" Type="int" />
+          <Property Name="MontoISC" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoIGV" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="DescuentoGlobal" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoAfecto" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoInafecto" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoExonerado" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoRegalo" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoDonacion" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoTotal" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TipoVenta" Type="tinyint" />
+          <Property Name="TotalDescuento" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TipoIGV" Type="tinyint" />
+          <Property Name="SerieReferencia2" Type="varchar" MaxLength="5" />
+          <Property Name="NumeroReferencia2" Type="varchar" MaxLength="50" />
+          <Property Name="CodigoDocumentoReferencia2" Type="int" />
+          <Property Name="ClienteConsumidorFinal" Type="tinyint" />
+          <Property Name="TipoAgenteTributario" Type="tinyint" />
+          <Property Name="ImportePercepcion" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="OrdenCompra" Type="varchar" MaxLength="20" />
+          <Property Name="FechaVencimiento" Type="datetime" />
+          <Property Name="EmailCliente" Type="varchar" MaxLength="200" />
+          <Property Name="TrasladoContabilidad" Type="tinyint" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="100" />
+          <Property Name="FechaHoraCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioActualizacion" Type="varchar" MaxLength="100" />
+          <Property Name="FechaHoraActualizacion" Type="datetime" />
+          <Property Name="CodigoDetraccion" Type="varchar" MaxLength="3" />
+          <Property Name="PorcentajeDetraccion" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="GlosaDetraccion" Type="varchar" MaxLength="100" />
+          <Property Name="FlagSunat" Type="bit" Nullable="false" />
+          <Property Name="FlagFE" Type="bit" Nullable="false" />
+          <Property Name="CodigoSunat" Type="varchar" MaxLength="4" />
+          <Property Name="EnvioXML" Type="varchar(max)" />
+          <Property Name="RespuestaXML" Type="varchar(max)" />
+          <Property Name="ArchivoPDF" Type="varchar(max)" />
+          <Property Name="Mensaje" Type="varchar" MaxLength="500" />
+          <Property Name="EstadoSunat" Type="varchar" MaxLength="20" />
+          <Property Name="FechaAtraque" Type="datetime" />
+          <Property Name="FechaDesatraque" Type="datetime" />
+          <Property Name="AfectoDetraccion" Type="bit" />
+          <Property Name="TransaccionHelm" Type="varchar" MaxLength="20" />
+          <Property Name="IdPuerto" Type="bigint" />
+          <Property Name="NumeroDocumentoSolidario" Type="varchar" MaxLength="20" />
+          <Property Name="NombreNave2" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="DocumentoDetalle">
+          <Key>
+            <PropertyRef Name="IdCodigoDocumentoDetalle" />
+          </Key>
+          <Property Name="IdCodigoDocumentoDetalle" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCodigoDocumento" Type="bigint" Nullable="false" />
+          <Property Name="IdHelm" Type="varchar" MaxLength="50" />
+          <Property Name="NombreArticulo" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ItemDetalle" Type="int" />
+          <Property Name="NombreUnidadMedida" Type="varchar" MaxLength="60" />
+          <Property Name="SiglaUnidadMedida" Type="varchar" MaxLength="15" />
+          <Property Name="UnidadMedidaSunat" Type="varchar" MaxLength="10" />
+          <Property Name="TipoProducto" Type="varchar" MaxLength="50" />
+          <Property Name="CodigoProducto" Type="varchar" MaxLength="50" />
+          <Property Name="TipoConcepto" Type="varchar" MaxLength="20" />
+          <Property Name="CodigoConcepto" Type="varchar" MaxLength="50" />
+          <Property Name="CuentaContableProducto" Type="varchar" MaxLength="50" />
+          <Property Name="Cantidad" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="PrecioUnitario" Type="numeric" Precision="15" Scale="5" />
+          <Property Name="TipoPrecio" Type="tinyint" />
+          <Property Name="Descuento" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="SubTotal" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="CodigoArticulo" Type="varchar" MaxLength="20" />
+          <Property Name="EsDescuento" Type="bit" />
+          <Property Name="MontoISC" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TasaISC" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoBruto" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoIGV" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TipoISC" Type="tinyint" />
+          <Property Name="PorcentajePercepcionArticulo" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="MontoMinimoConsumidorFinal" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TipoPercepcion" Type="tinyint" />
+          <Property Name="PorcentajePercepcionVenta" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="ImportePercepcion" Type="numeric" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="Numerador">
+          <Key>
+            <PropertyRef Name="IdNumerador" />
+          </Key>
+          <Property Name="IdNumerador" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Factura" Type="bigint" Nullable="false" />
+          <Property Name="Boleta" Type="bigint" Nullable="false" />
+          <Property Name="NotaCredito" Type="bigint" Nullable="false" />
+          <Property Name="NotaDebito" Type="bigint" Nullable="false" />
+          <Property Name="FacturaTalara" Type="bigint" Nullable="false" />
+          <Property Name="BoletaTalara" Type="bigint" Nullable="false" />
+          <Property Name="NotaCreditoTalara" Type="bigint" Nullable="false" />
+          <Property Name="NotaDebitoTalara" Type="bigint" Nullable="false" />
+          <Property Name="OrdenCompra" Type="bigint" Nullable="false" />
+          <Property Name="OrdenCompraTalara" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TarifaDetraccion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoProducto" Type="varchar" MaxLength="30" />
+          <Property Name="NombreArticulo" Type="varchar" MaxLength="250" />
+          <Property Name="CodigoDetraccion" Type="varchar" MaxLength="3" />
+          <Property Name="PorcentajeDetraccion" Type="int" />
+          <Property Name="TopeMinimoSoles" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TopeMinimoDolares" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="CentroBeneficio" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK_DocumentoDetalle_Documento">
+          <End Role="Documento" Type="Self.Documento" Multiplicity="1" />
+          <End Role="DocumentoDetalle" Type="Self.DocumentoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documento">
+              <PropertyRef Name="IdCodigoDocumento" />
+            </Principal>
+            <Dependent Role="DocumentoDetalle">
+              <PropertyRef Name="IdCodigoDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HELMModelStoreContainer">
+          <EntitySet Name="CentroBeneficioPracticoSede" EntityType="Self.CentroBeneficioPracticoSede" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClienteRelacionado" EntityType="Self.ClienteRelacionado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Documento" EntityType="Self.Documento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentoDetalle" EntityType="Self.DocumentoDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Numerador" EntityType="Self.Numerador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TarifaDetraccion" EntityType="Self.TarifaDetraccion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DocumentoDetalle_Documento" Association="Self.FK_DocumentoDetalle_Documento">
+            <End Role="Documento" EntitySet="Documento" />
+            <End Role="DocumentoDetalle" EntitySet="DocumentoDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HELMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DocumentoDetalle">
+          <Key>
+            <PropertyRef Name="IdCodigoDocumentoDetalle" />
+          </Key>
+          <Property Name="IdCodigoDocumentoDetalle" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCodigoDocumento" Type="Int64" Nullable="false" />
+          <Property Name="IdHelm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreArticulo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ItemDetalle" Type="Int32" />
+          <Property Name="NombreUnidadMedida" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SiglaUnidadMedida" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="UnidadMedidaSunat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TipoProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoConcepto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoConcepto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CuentaContableProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cantidad" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PrecioUnitario" Type="Decimal" Precision="15" Scale="5" />
+          <Property Name="TipoPrecio" Type="Byte" />
+          <Property Name="Descuento" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="SubTotal" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CodigoArticulo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EsDescuento" Type="Boolean" />
+          <Property Name="MontoISC" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TasaISC" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoBruto" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoIGV" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TipoISC" Type="Byte" />
+          <Property Name="PorcentajePercepcionArticulo" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoMinimoConsumidorFinal" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TipoPercepcion" Type="Byte" />
+          <Property Name="PorcentajePercepcionVenta" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="ImportePercepcion" Type="Decimal" Precision="15" Scale="2" />
+          <NavigationProperty Name="Documento" Relationship="HELMModel.FK_DocumentoDetalle_Documento" FromRole="DocumentoDetalle" ToRole="Documento" />
+        </EntityType>
+        <EntityContainer Name="HELMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DocumentoDetalle" EntityType="Self.DocumentoDetalle" />
+          <EntitySet Name="TarifaDetraccion" EntityType="HELMModel.TarifaDetraccion" />
+          <EntitySet Name="ClienteRelacionado" EntityType="HELMModel.ClienteRelacionado" />
+          <EntitySet Name="CentroBeneficioPracticoSede" EntityType="HELMModel.CentroBeneficioPracticoSede" />
+          <EntitySet Name="Numerador" EntityType="HELMModel.Numerador" />
+          <EntitySet Name="Documento" EntityType="HELMModel.Documento" />
+          <AssociationSet Name="FK_DocumentoDetalle_Documento" Association="HELMModel.FK_DocumentoDetalle_Documento">
+            <End Role="Documento" EntitySet="Documento" />
+            <End Role="DocumentoDetalle" EntitySet="DocumentoDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TarifaDetraccion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoProducto" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NombreArticulo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoDetraccion" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="PorcentajeDetraccion" Type="Int32" />
+          <Property Name="TopeMinimoSoles" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TopeMinimoDolares" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="CentroBeneficio" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ClienteRelacionado">
+          <Key>
+            <PropertyRef Name="IdClienteRelacionado" />
+          </Key>
+          <Property Name="IdClienteRelacionado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroDocumento" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="NombreCliente" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoRegistro" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioActualizacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraActualizacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CentroBeneficioPracticoSede">
+          <Key>
+            <PropertyRef Name="IdCentroBeneficioPracticoSede" />
+          </Key>
+          <Property Name="IdCentroBeneficioPracticoSede" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPuerto" Type="Int64" Nullable="false" />
+          <Property Name="CentroBeneficio" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoRegistro" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioActualizacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraActualizacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Numerador">
+          <Key>
+            <PropertyRef Name="IdNumerador" />
+          </Key>
+          <Property Name="IdNumerador" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Factura" Type="Int64" Nullable="false" />
+          <Property Name="Boleta" Type="Int64" Nullable="false" />
+          <Property Name="NotaCredito" Type="Int64" Nullable="false" />
+          <Property Name="NotaDebito" Type="Int64" Nullable="false" />
+          <Property Name="FacturaTalara" Type="Int64" Nullable="false" />
+          <Property Name="BoletaTalara" Type="Int64" Nullable="false" />
+          <Property Name="NotaCreditoTalara" Type="Int64" Nullable="false" />
+          <Property Name="NotaDebitoTalara" Type="Int64" Nullable="false" />
+          <Property Name="OrdenCompra" Type="Int64" Nullable="false" />
+          <Property Name="OrdenCompraTalara" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Documento">
+          <Key>
+            <PropertyRef Name="IdCodigoDocumento" />
+          </Key>
+          <Property Name="IdCodigoDocumento" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdHelm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoDocumento" Type="Int32" />
+          <Property Name="NombreCliente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoDocumentoCliente" Type="Int32" />
+          <Property Name="NumeroDocumentoCliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionCliente" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NombreSolidario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NombreNave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TRB" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="Eslora" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="CodigoMoneda" Type="Int32" />
+          <Property Name="NombreMotivoNC_ND" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoSunatNC_ND" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Serie" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaEmision" Type="DateTime" Precision="3" />
+          <Property Name="TipoCambio" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="Glosa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FormaPago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="SerieReferencia" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroReferencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoDocumentoReferencia" Type="Int32" />
+          <Property Name="MontoISC" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoIGV" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="DescuentoGlobal" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoAfecto" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoInafecto" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoExonerado" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoRegalo" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoDonacion" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="MontoTotal" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TipoVenta" Type="Byte" />
+          <Property Name="TotalDescuento" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="TipoIGV" Type="Byte" />
+          <Property Name="SerieReferencia2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroReferencia2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoDocumentoReferencia2" Type="Int32" />
+          <Property Name="ClienteConsumidorFinal" Type="Byte" />
+          <Property Name="TipoAgenteTributario" Type="Byte" />
+          <Property Name="ImportePercepcion" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="OrdenCompra" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaVencimiento" Type="DateTime" Precision="3" />
+          <Property Name="EmailCliente" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TrasladoContabilidad" Type="Byte" />
+          <Property Name="UsuarioCreacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioActualizacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraActualizacion" Type="DateTime" Precision="3" />
+          <Property Name="CodigoDetraccion" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="PorcentajeDetraccion" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="GlosaDetraccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FlagSunat" Type="Boolean" Nullable="false" />
+          <Property Name="FlagFE" Type="Boolean" Nullable="false" />
+          <Property Name="CodigoSunat" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EnvioXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RespuestaXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ArchivoPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Mensaje" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoSunat" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaAtraque" Type="DateTime" Precision="3" />
+          <Property Name="FechaDesatraque" Type="DateTime" Precision="3" />
+          <Property Name="AfectoDetraccion" Type="Boolean" />
+          <Property Name="TransaccionHelm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IdPuerto" Type="Int64" />
+          <NavigationProperty Name="DocumentoDetalle" Relationship="HELMModel.FK_DocumentoDetalle_Documento" FromRole="Documento" ToRole="DocumentoDetalle" />
+          <Property Name="NumeroDocumentoSolidario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreNave2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_DocumentoDetalle_Documento">
+          <End Type="HELMModel.Documento" Role="Documento" Multiplicity="1" />
+          <End Type="HELMModel.DocumentoDetalle" Role="DocumentoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documento">
+              <PropertyRef Name="IdCodigoDocumento" />
+            </Principal>
+            <Dependent Role="DocumentoDetalle">
+              <PropertyRef Name="IdCodigoDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HELMModelStoreContainer" CdmEntityContainer="HELMEntities">
+          <EntitySetMapping Name="DocumentoDetalle">
+            <EntityTypeMapping TypeName="HELMModel.DocumentoDetalle">
+              <MappingFragment StoreEntitySet="DocumentoDetalle">
+                <ScalarProperty Name="IdCodigoDocumentoDetalle" ColumnName="IdCodigoDocumentoDetalle" />
+                <ScalarProperty Name="IdCodigoDocumento" ColumnName="IdCodigoDocumento" />
+                <ScalarProperty Name="IdHelm" ColumnName="IdHelm" />
+                <ScalarProperty Name="NombreArticulo" ColumnName="NombreArticulo" />
+                <ScalarProperty Name="ItemDetalle" ColumnName="ItemDetalle" />
+                <ScalarProperty Name="NombreUnidadMedida" ColumnName="NombreUnidadMedida" />
+                <ScalarProperty Name="SiglaUnidadMedida" ColumnName="SiglaUnidadMedida" />
+                <ScalarProperty Name="UnidadMedidaSunat" ColumnName="UnidadMedidaSunat" />
+                <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+                <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+                <ScalarProperty Name="TipoConcepto" ColumnName="TipoConcepto" />
+                <ScalarProperty Name="CodigoConcepto" ColumnName="CodigoConcepto" />
+                <ScalarProperty Name="CuentaContableProducto" ColumnName="CuentaContableProducto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+                <ScalarProperty Name="TipoPrecio" ColumnName="TipoPrecio" />
+                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="CodigoArticulo" ColumnName="CodigoArticulo" />
+                <ScalarProperty Name="EsDescuento" ColumnName="EsDescuento" />
+                <ScalarProperty Name="MontoISC" ColumnName="MontoISC" />
+                <ScalarProperty Name="TasaISC" ColumnName="TasaISC" />
+                <ScalarProperty Name="MontoBruto" ColumnName="MontoBruto" />
+                <ScalarProperty Name="MontoIGV" ColumnName="MontoIGV" />
+                <ScalarProperty Name="TipoISC" ColumnName="TipoISC" />
+                <ScalarProperty Name="PorcentajePercepcionArticulo" ColumnName="PorcentajePercepcionArticulo" />
+                <ScalarProperty Name="MontoMinimoConsumidorFinal" ColumnName="MontoMinimoConsumidorFinal" />
+                <ScalarProperty Name="TipoPercepcion" ColumnName="TipoPercepcion" />
+                <ScalarProperty Name="PorcentajePercepcionVenta" ColumnName="PorcentajePercepcionVenta" />
+                <ScalarProperty Name="ImportePercepcion" ColumnName="ImportePercepcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TarifaDetraccion">
+            <EntityTypeMapping TypeName="HELMModel.TarifaDetraccion">
+              <MappingFragment StoreEntitySet="TarifaDetraccion">
+                <ScalarProperty Name="CentroBeneficio" ColumnName="CentroBeneficio" />
+                <ScalarProperty Name="TopeMinimoDolares" ColumnName="TopeMinimoDolares" />
+                <ScalarProperty Name="TopeMinimoSoles" ColumnName="TopeMinimoSoles" />
+                <ScalarProperty Name="PorcentajeDetraccion" ColumnName="PorcentajeDetraccion" />
+                <ScalarProperty Name="CodigoDetraccion" ColumnName="CodigoDetraccion" />
+                <ScalarProperty Name="NombreArticulo" ColumnName="NombreArticulo" />
+                <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClienteRelacionado">
+            <EntityTypeMapping TypeName="HELMModel.ClienteRelacionado">
+              <MappingFragment StoreEntitySet="ClienteRelacionado">
+                <ScalarProperty Name="FechaHoraActualizacion" ColumnName="FechaHoraActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="EstadoRegistro" ColumnName="EstadoRegistro" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+                <ScalarProperty Name="IdClienteRelacionado" ColumnName="IdClienteRelacionado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CentroBeneficioPracticoSede">
+            <EntityTypeMapping TypeName="HELMModel.CentroBeneficioPracticoSede">
+              <MappingFragment StoreEntitySet="CentroBeneficioPracticoSede">
+                <ScalarProperty Name="FechaHoraActualizacion" ColumnName="FechaHoraActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="EstadoRegistro" ColumnName="EstadoRegistro" />
+                <ScalarProperty Name="CentroBeneficio" ColumnName="CentroBeneficio" />
+                <ScalarProperty Name="IdPuerto" ColumnName="IdPuerto" />
+                <ScalarProperty Name="IdCentroBeneficioPracticoSede" ColumnName="IdCentroBeneficioPracticoSede" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Numerador">
+            <EntityTypeMapping TypeName="HELMModel.Numerador">
+              <MappingFragment StoreEntitySet="Numerador">
+                <ScalarProperty Name="OrdenCompraTalara" ColumnName="OrdenCompraTalara" />
+                <ScalarProperty Name="OrdenCompra" ColumnName="OrdenCompra" />
+                <ScalarProperty Name="NotaDebitoTalara" ColumnName="NotaDebitoTalara" />
+                <ScalarProperty Name="NotaCreditoTalara" ColumnName="NotaCreditoTalara" />
+                <ScalarProperty Name="BoletaTalara" ColumnName="BoletaTalara" />
+                <ScalarProperty Name="FacturaTalara" ColumnName="FacturaTalara" />
+                <ScalarProperty Name="NotaDebito" ColumnName="NotaDebito" />
+                <ScalarProperty Name="NotaCredito" ColumnName="NotaCredito" />
+                <ScalarProperty Name="Boleta" ColumnName="Boleta" />
+                <ScalarProperty Name="Factura" ColumnName="Factura" />
+                <ScalarProperty Name="IdNumerador" ColumnName="IdNumerador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Documento">
+            <EntityTypeMapping TypeName="HELMModel.Documento">
+              <MappingFragment StoreEntitySet="Documento">
+                <ScalarProperty Name="NombreNave2" ColumnName="NombreNave2" />
+                <ScalarProperty Name="NumeroDocumentoSolidario" ColumnName="NumeroDocumentoSolidario" />
+                <ScalarProperty Name="IdPuerto" ColumnName="IdPuerto" />
+                <ScalarProperty Name="TransaccionHelm" ColumnName="TransaccionHelm" />
+                <ScalarProperty Name="AfectoDetraccion" ColumnName="AfectoDetraccion" />
+                <ScalarProperty Name="FechaDesatraque" ColumnName="FechaDesatraque" />
+                <ScalarProperty Name="FechaAtraque" ColumnName="FechaAtraque" />
+                <ScalarProperty Name="EstadoSunat" ColumnName="EstadoSunat" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+                <ScalarProperty Name="ArchivoPDF" ColumnName="ArchivoPDF" />
+                <ScalarProperty Name="RespuestaXML" ColumnName="RespuestaXML" />
+                <ScalarProperty Name="EnvioXML" ColumnName="EnvioXML" />
+                <ScalarProperty Name="CodigoSunat" ColumnName="CodigoSunat" />
+                <ScalarProperty Name="FlagFE" ColumnName="FlagFE" />
+                <ScalarProperty Name="FlagSunat" ColumnName="FlagSunat" />
+                <ScalarProperty Name="GlosaDetraccion" ColumnName="GlosaDetraccion" />
+                <ScalarProperty Name="PorcentajeDetraccion" ColumnName="PorcentajeDetraccion" />
+                <ScalarProperty Name="CodigoDetraccion" ColumnName="CodigoDetraccion" />
+                <ScalarProperty Name="FechaHoraActualizacion" ColumnName="FechaHoraActualizacion" />
+                <ScalarProperty Name="UsuarioActualizacion" ColumnName="UsuarioActualizacion" />
+                <ScalarProperty Name="FechaHoraCreacion" ColumnName="FechaHoraCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="TrasladoContabilidad" ColumnName="TrasladoContabilidad" />
+                <ScalarProperty Name="EmailCliente" ColumnName="EmailCliente" />
+                <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+                <ScalarProperty Name="OrdenCompra" ColumnName="OrdenCompra" />
+                <ScalarProperty Name="ImportePercepcion" ColumnName="ImportePercepcion" />
+                <ScalarProperty Name="TipoAgenteTributario" ColumnName="TipoAgenteTributario" />
+                <ScalarProperty Name="ClienteConsumidorFinal" ColumnName="ClienteConsumidorFinal" />
+                <ScalarProperty Name="CodigoDocumentoReferencia2" ColumnName="CodigoDocumentoReferencia2" />
+                <ScalarProperty Name="NumeroReferencia2" ColumnName="NumeroReferencia2" />
+                <ScalarProperty Name="SerieReferencia2" ColumnName="SerieReferencia2" />
+                <ScalarProperty Name="TipoIGV" ColumnName="TipoIGV" />
+                <ScalarProperty Name="TotalDescuento" ColumnName="TotalDescuento" />
+                <ScalarProperty Name="TipoVenta" ColumnName="TipoVenta" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="MontoDonacion" ColumnName="MontoDonacion" />
+                <ScalarProperty Name="MontoRegalo" ColumnName="MontoRegalo" />
+                <ScalarProperty Name="MontoExonerado" ColumnName="MontoExonerado" />
+                <ScalarProperty Name="MontoInafecto" ColumnName="MontoInafecto" />
+                <ScalarProperty Name="MontoAfecto" ColumnName="MontoAfecto" />
+                <ScalarProperty Name="DescuentoGlobal" ColumnName="DescuentoGlobal" />
+                <ScalarProperty Name="MontoIGV" ColumnName="MontoIGV" />
+                <ScalarProperty Name="MontoISC" ColumnName="MontoISC" />
+                <ScalarProperty Name="CodigoDocumentoReferencia" ColumnName="CodigoDocumentoReferencia" />
+                <ScalarProperty Name="NumeroReferencia" ColumnName="NumeroReferencia" />
+                <ScalarProperty Name="SerieReferencia" ColumnName="SerieReferencia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+                <ScalarProperty Name="Glosa" ColumnName="Glosa" />
+                <ScalarProperty Name="TipoCambio" ColumnName="TipoCambio" />
+                <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="CodigoSunatNC_ND" ColumnName="CodigoSunatNC_ND" />
+                <ScalarProperty Name="NombreMotivoNC_ND" ColumnName="NombreMotivoNC_ND" />
+                <ScalarProperty Name="CodigoMoneda" ColumnName="CodigoMoneda" />
+                <ScalarProperty Name="Eslora" ColumnName="Eslora" />
+                <ScalarProperty Name="TRB" ColumnName="TRB" />
+                <ScalarProperty Name="NombreNave" ColumnName="NombreNave" />
+                <ScalarProperty Name="NombreSolidario" ColumnName="NombreSolidario" />
+                <ScalarProperty Name="DireccionCliente" ColumnName="DireccionCliente" />
+                <ScalarProperty Name="NumeroDocumentoCliente" ColumnName="NumeroDocumentoCliente" />
+                <ScalarProperty Name="CodigoDocumentoCliente" ColumnName="CodigoDocumentoCliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="CodigoDocumento" ColumnName="CodigoDocumento" />
+                <ScalarProperty Name="IdHelm" ColumnName="IdHelm" />
+                <ScalarProperty Name="IdCodigoDocumento" ColumnName="IdCodigoDocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
